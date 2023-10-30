@@ -26,7 +26,9 @@ const calculateTotal = (itemsArray)=>{
 for (let i = 0; i < itemsArray.length; i++) {
     total += itemsArray[i].price;
 }
- return total.toFixed(2);
+//toFixed(2) -- 2 decimals but total is still string. 
+//Used parseFloat() -- converted string to #
+ return parseFloat(total.toFixed(2));
 
 };
 
